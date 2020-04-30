@@ -35,7 +35,7 @@ function SignIn() {
             actions={
                 {
                     left: loginButton,
-                    right: <Link to="/signup" className="btn btn-link">Register</Link>
+                    right: <Link to="/signup" className="btn btn-link">Sign Up</Link>
                 }
             }
             handleSubmit={handleSubmit}
