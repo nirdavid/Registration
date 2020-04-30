@@ -25,7 +25,7 @@ function SignIn() {
     const loginButton =
         <button className="btn btn-primary">
             {loggedIn && <span className="spinner-border spinner-border-sm mr-1"></span>}
-            Login
+            Sign In
         </button>;
 
     return (
