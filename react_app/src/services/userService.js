@@ -40,7 +40,6 @@ export function handleResponse(response) {
             if (response.status === 401) {
                 // auto logout if 401 UNAUTHORIZED response returned from api
                 signOut();
-                //location.reload(true);
             }
 
             const error = (data && data.msg) || response.statusText;
