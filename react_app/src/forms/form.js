@@ -19,7 +19,7 @@ function Form({fieldsStaticData, title, actions, handleSubmit}) {
         setSubmitted(true);
         if (Object.keys(fields).every(fieldName => {
             const validator = fieldsStaticData[fieldName].validator;
-            return validator && validator(fields[fieldName]); //check _.isFunction(validator)
+            return validator && validator(fields[fieldName]); //Future improvements are possible: use _.isFunction(validator) or TypeScript
         })) {
             handleSubmit(fields);
         }
