@@ -27,7 +27,7 @@ function signIn(user) {
     return fetch(`${prefix}/auth/signin`, getRequestOptions(user))
         .then(handleResponse)
         .then(responseData => {
-            // store user details (optional feature) and jwt token in cookie to keep user logged in between page refreshes
+            // store jwt token in cookie to keep user logged in between page refreshes
             setCookie('token', responseData.token);
             return responseData;
         });
