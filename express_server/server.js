@@ -2,11 +2,11 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const app = express();
 const cors = require('cors');
-const passwordHash = require('./src/password/Password');
+const passwordHash = require('./src/password/password');
 const utils = require('./src/utils/Utils');
-const user = require('./src/user/User');
-const candidate = require('./src/candidate/Candidate');
-const token = require('./src/token/Token');
+const user = require('./src/services/userService');
+const candidate = require('./src/services/candidateService');
+const token = require('./src/token/token');
 const dotenv = require("dotenv");
 
 app.use(cors());

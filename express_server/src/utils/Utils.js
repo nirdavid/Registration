@@ -1,4 +1,4 @@
-const token = require('../token/Token');
+const token = require('../token/token');
 
 module.exports = {
     returnBadRequest: function(res, err) {
