@@ -1,5 +1,5 @@
 const db = require("../db/database");
-const utils = require('../utils/Utils');
+const utils = require('../utils/utils');
 
 module.exports = {
     storeUserInDB: function(res, userData, onUserInsert) {
