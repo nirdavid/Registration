@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { userActions } from '../actions';
 import {Form} from './form';
-import {isNonEmpty, isEmail} from "../validators/validator";
+import {isNonEmpty, isEmail, isMinLength} from "../validators/validator";
 
 function SignUp() {
     const registering = useSelector(state => state.signUp.registering);
@@ -11,7 +11,7 @@ function SignUp() {
     const fields = {
         username: {initialValue: '', label: 'Username', validator: isNonEmpty, error: 'Username is required'},
         email: {initialValue: '', label: 'Email', validator: isEmail, error: 'Valid Email is required'},
-        password: {initialValue: '', label: 'Password', validator: isNonEmpty, error: 'Password is required', type: 'password'}
+        password: {initialValue: '', label: 'Password', validator: isMinLength, error: 'Password must be at least 6 characters long', type: 'password'}
     };
 
     // reset login
