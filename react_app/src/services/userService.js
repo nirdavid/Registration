@@ -1,4 +1,4 @@
-import {prefix} from "./consts";
+import {prefixApiAuth} from "./consts";
 import {resetCookie, setCookie} from "../helpers";
 
 export const userService = {
@@ -20,11 +20,11 @@ const getRequestOptions = (user) => {
 };
 
 function signUp(user) {
-    return fetch(`${prefix}/auth/signup`, getRequestOptions(user)).then(handleResponse);
+    return fetch(`${prefixApiAuth}/signup`, getRequestOptions(user)).then(handleResponse);
 }
 
 function signIn(user) {
-    return fetch(`${prefix}/auth/signin`, getRequestOptions(user))
+    return fetch(`${prefixApiAuth}/signin`, getRequestOptions(user))
         .then(handleResponse)
         .then(responseData => {
             // store jwt token in cookie to keep user logged in between page refreshes

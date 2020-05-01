@@ -1,6 +1,6 @@
 import {authHeader} from "../helpers";
 import {handleResponse} from "./userService";
-import {prefix} from "./consts";
+import {prefixApi} from "./consts";
 
 export const candidateService = {
     getCandidates,
@@ -11,5 +11,5 @@ function getCandidates() {
         method: 'GET',
         headers: authHeader()
     };
-    return fetch(`${prefix}/candidates`, requestOptions).then(handleResponse);
+    return fetch(`${prefixApi}/candidates`, requestOptions).then(handleResponse);
 }
